@@ -1,0 +1,53 @@
+info:
+  id: ${spring.application.name}
+
+port:
+  reservation-meetingroom-application: 8100
+
+---
+spring:
+  profiles: local
+
+application:
+  api:
+    url: localhost
+
+logging:
+  level:
+    root: DEBUG
+    org.apache: WARN
+    org.apache.cxf: WARN
+    org.springframework: WARN
+    org.springframework.aop.interceptor.PerformanceMonitorInterceptor: TRACE
+    org.springframework.aop.interceptor.CustomizableTraceInterceptor: TRACE
+    org.hibernate: WARN
+    org.mybatis: DEBUG
+    com.netflix: WARN
+    springfox: WARN
+    com.zaxxer.hikari: WARN
+    zipkin2: WARN
+    io.lettuce: INFO
+
+---
+spring:
+  profiles: prod
+
+application:
+  api:
+    url: localhost
+
+logging:
+  level:
+    root: DEBUG
+    org.apache: WARN
+    org.apache.cxf: WARN
+    org.springframework: WARN
+    org.springframework.aop.interceptor.PerformanceMonitorInterceptor: TRACE
+    org.springframework.aop.interceptor.CustomizableTraceInterceptor: TRACE
+    org.hibernate: WARN
+    org.mybatis: DEBUG
+    com.netflix: WARN
+    springfox: WARN
+    com.zaxxer.hikari: WARN
+    zipkin2: WARN
+    io.lettuce: INFO

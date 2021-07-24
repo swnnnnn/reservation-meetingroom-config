@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    driver-class-name: "org.h2.Driver"
+    tomcat:
+      max-wait: 3000
+      max-active: 10
+      max-idle: 10
+      min-idle: 10
+      initial-size: 10
+
+---
+spring:
+  profiles: local
+  datasource:
+    url: "jdbc:h2:mem:testdb"
+    username: "sa"
+    password: ""
+
+---
+spring:
+  profiles: prod
+  datasource:
+    url: ""
+    username: ""
+    password: ""
